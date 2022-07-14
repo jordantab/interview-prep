@@ -1,6 +1,6 @@
 '''
 Cracking the Coding Interview: Arrays and String 1.2
-Author: Jordan Tab
+Author: Jordan Tab5
 '''
 
 #sort the strings and check if they're equal
