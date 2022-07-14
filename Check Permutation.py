@@ -15,3 +15,4 @@ def checkperm(s1,s2):
 
 print(checkperm("abcced","deccba"))
 print(checkperm("abccefeed","deccba"))
+print(checkperm("abccefeed","deccba"))
