@@ -1,6 +1,7 @@
 '''
 Cracking the Coding Interview: Arrays and String 1.2
-Author: Jordan Tab5
+Problem: Check if two strings are permutations of each other
+Author: Jordan Tab
 '''
 
 #sort the strings and check if they're equal
@@ -14,5 +15,4 @@ def checkperm(s1,s2):
         return False
 
 print(checkperm("abcced","deccba"))
-print(checkperm("abccefeed","deccba"))
 print(checkperm("abccefeed","deccba"))
