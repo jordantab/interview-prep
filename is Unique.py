@@ -1,30 +1,27 @@
-#HashTable from scratch
-def isUnique(s):
-    alph_length = 26
-    table = [0] * alph_length
-    for char in s:
-        index = ord(char) % alph_length
-        table[index] += 1
-        if table[index] > 1:
-            return False
-    return True
+'''
+Cracking the Coding Interview: Arrays and String 1.1
+Problem: Check if a string has all unique characters
+Author: Jordan Tab
+'''
 
-print(isUnique("String"))
-print(isUnique("Boston"))
-print(isUnique(""))
-print(isUnique("abcdefghijklmnopqrstuvwxyza"))
-
-#Dictionary Method
-def isU(s):
+# with a hash table
+def isU1(s):
+    '''
+    checks if a string has all unique characters using additional data structures
+    '''
+    # create a hash table and add unique characters. if not unique return false
     hashT = {}
-
     for char in s:
         if char not in hashT:
             hashT[char] = 1
         else:
             return False
     return True
-        
 
-print(isU("String"))
-print(isU("Boston"))
+print(isU1("String"))
+print(isU1("Boston"))
+
+def isU2(s):
+    '''
+    checks if a string has all unique characters without using additional data structures
+    '''
