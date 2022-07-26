@@ -9,11 +9,12 @@ def isU1(s):
     '''
     checks if a string has all unique characters using additional data structures
     '''
-    # create a hash table and add unique characters. if not unique return false
+    # create a hash table and add unique characters
     hashT = {}
     for char in s:
         if char not in hashT:
             hashT[char] = 1
+        # character already in table = not unique
         else:
             return False
     return True
