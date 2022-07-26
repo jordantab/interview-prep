@@ -1,3 +1,3 @@
 # interview_prep
-Technical interview prep questions
+Technical interview prep questions.
 All solutions are mine
