@@ -9,11 +9,19 @@ def URLify(s):
     for i in range(len(str)):
         if str[i] == " ":
             str[i] = "%20"
-        else:
-            continue
     return "".join(str)
 
 print(URLify("Mr John Smith"))
 print(URLify("Mr John     Smith"))
 print(URLify("     Mr John     Smith"))
 print(URLify("     Mr John     Smi  th  "))
+
+# using built-in replace function
+def URLify2(s):
+    s = s.replace(" ","%20")
+    return s
+    
+print(URLify2("Mr John Smith"))
+print(URLify2("Mr John     Smith"))
+print(URLify2("     Mr John     Smith"))
+print(URLify2("     Mr John     Smi  th  "))
