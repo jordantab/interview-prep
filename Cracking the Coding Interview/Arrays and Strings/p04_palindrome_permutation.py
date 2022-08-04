@@ -1,6 +1,7 @@
 '''
 Cracking the Coding Interview: Arrays and String 1.4
-Problem: Given a string, write a function to check if it is a permutation of a palinfrome. A palindrome is a word or phrase that is the same forwards and backwards
+Problem: Given a string, write a function to check if it is a permutation of a palindrome. A palindrome is a word or phrase that is 
+the same forwards and backwards
 Author: Jordan Tab
 '''
 
