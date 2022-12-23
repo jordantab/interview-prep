@@ -26,6 +26,31 @@ def palindrome_permutation(string):
     else:
         return True
 
-print(palindrome_permutation("ajbdfj"))
-print(palindrome_permutation("tact coa"))
-print(palindrome_permutation("racecar"))
+# print(palindrome_permutation("ajbdfj"))
+# print(palindrome_permutation("tact coa"))
+# print(palindrome_permutation("racecar"))
+
+def pp(s):
+    clean_s = s.replace(" ","")
+    hashT = {}
+
+    for letter in clean_s:
+        if letter not in hashT:
+            hashT[letter] = 1
+        else:
+            hashT[letter] += 1
+
+    odd_counter = 0
+    for letter in hashT:
+        count = hashT[letter]
+        if count % 2 == 1:
+            odd_counter += 1
+    
+    if odd_counter > 1:
+        return False
+    else:
+        return True
+
+print(pp("ajbdfj"))
+print(pp("tact coa"))
+print(pp("racecar"))

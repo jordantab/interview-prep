@@ -24,7 +24,30 @@ def compression(s):
                 d[s[i-1]] = 0
     result += f'{s[len(s)-1]}{d[s[len(s)-1]]}'
     return result
-print(compression("abccaa"))
-print(compression("abccccccc"))
+# print(compression("abccaa"))
+# print(compression("abccccccc"))
+
+def compress(s):
+    output = ""
+    table = {}
+
+    for i,letter in enumerate(s):
+        if i == 0:
+            table[letter] = 1
+        else:    
+            if letter == s[i-1]:
+                table[letter] += 1
+            else:
+                table[letter] = 1
+                prev = s[i-1]
+                output += prev
+                output += str(table[prev])
+                table[prev] = 0
+        
+    output += s[len(s)-1]
+    output += str(table[s[len(s)-1]])
+    return output
 
 
+print(compress("abccaa"))
+print(compress("abccccccc"))
